@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'file_type.dart';
 
 //export file type enum
-export 'package:flutter_share_me/file_type.dart';
+// export 'package:flutter_share_me/file_type.dart';
 
 class FlutterShareMe {
   final MethodChannel _channel = const MethodChannel('flutter_share_me');
@@ -13,7 +13,7 @@ class FlutterShareMe {
   static const String _methodWhatsAppBusiness = 'whatsapp_business_share';
   static const String _methodFaceBook = 'facebook_share';
   static const String _methodMessenger = 'messenger_share';
-  static const String _methodTwitter = 'twitter_share';
+  // static const String _methodTwitter = 'twitter_share';
   static const String _methodInstagramShare = 'instagram_share';
   static const String _methodSystemShare = 'system_share';
   static const String _methodTelegramShare = 'telegram_share';
@@ -134,18 +134,18 @@ class FlutterShareMe {
 
   ///share to twitter
   ///[msg] string that you want share.
-  Future<String?> shareToTwitter({required String msg, String url = ''}) async {
-    final Map<String, dynamic> arguments = <String, dynamic>{};
-    arguments.putIfAbsent('msg', () => msg);
-    arguments.putIfAbsent('url', () => url);
-    String? result;
-    try {
-      result = await _channel.invokeMethod(_methodTwitter, arguments);
-    } catch (e) {
-      return e.toString();
-    }
-    return result;
-  }
+  // Future<String?> shareToTwitter({required String msg, String url = ''}) async {
+  //   final Map<String, dynamic> arguments = <String, dynamic>{};
+  //   arguments.putIfAbsent('msg', () => msg);
+  //   arguments.putIfAbsent('url', () => url);
+  //   String? result;
+  //   try {
+  //     result = await _channel.invokeMethod(_methodTwitter, arguments);
+  //   } catch (e) {
+  //     return e.toString();
+  //   }
+  //   return result;
+  // }
 
   ///use system share ui
   Future<String?> shareToSystem({required String msg}) async {
